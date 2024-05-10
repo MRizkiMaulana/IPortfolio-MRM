@@ -100,22 +100,66 @@
               magna aliqua.
             </p>-->
             <div class="row">
-              <div class="col-lg-6">
+    <div class="col-lg-6">
+        <ul>
+            <li><i class="bi bi-chevron-right"></i> <strong>Nama:</strong> <span>Muhamad Rizki Maulana</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Lahir:</strong> <span>19 Agustus 2002</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong><a href="https://mrizk.my.id/" style="color: white;">Website:</a></strong> <span><a href="https://mrizk.my.id/" style="color: white;">mrizk.my.id</a></span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong><a href="tel:087788132326" style="color: white;">Telepon</a> / <a href="https://wa.me/6287788132326" style="color: white;">Whatsapp:</a></strong> <span><a href="https://wa.me/6287788132326" style="color: white;">+6287788132326</a></span></li>
+        </ul>
+    </div>
+    <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Nama:</strong> <span>Muhamad Rizki Maulana</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Lahir:</strong> <span>19 Agustus 2002</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong><a href="https://mrizk.my.id/" style="color: white;">Website:</a></strong> <span><a href="https://mrizk.my.id/" style="color: white;">mrizk.my.id</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong><a href="tel:087788132326" style="color: white;">Telepon</a> / <a href="https://wa.me/6287788132326" style="color: white;">Whatsapp:</a></strong> <span><a href="https://wa.me/6287788132326" style="color: white;">+6287788132326</a></span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Tahun:</strong> <span>21</span></li>
+                  <li id="umur_elemen"><i class="bi bi-chevron-right"></i> <strong>Umur:</strong> <span>Menunggu input tanggal lahir...</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong><a href="mailto:me@mrizk.my.id" style="color: white;">Email:</a></strong> <span><a href="mailto:me@mrizk.my.id" style="color: white;">me@mrizk.my.id</a></span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
-            </div>
+</div>
+
+<script>
+    // Fungsi untuk menghitung umur berdasarkan tanggal lahir
+    function hitungUmur(tanggalLahir) {
+        var lahir = new Date(tanggalLahir);
+        var sekarang = new Date();
+
+        var tahun = sekarang.getFullYear() - lahir.getFullYear();
+        var bulan = sekarang.getMonth() - lahir.getMonth();
+        var hari = sekarang.getDate() - lahir.getDate();
+
+        // Jika bulan atau hari lahir di depan tanggal sekarang
+        if (bulan < 0 || (bulan === 0 && hari < 0)) {
+            tahun--;
+        }
+
+        // Jika bulan lahir di depan tanggal sekarang
+        if (bulan < 0) {
+            bulan += 12;
+        }
+
+        return {
+            tahun: tahun,
+            bulan: bulan,
+            hari: hari
+        };
+    }
+
+    // Fungsi untuk menampilkan umur secara real-time
+    function tampilkanUmurRealTime() {
+        // Ambil nilai tanggal lahir
+        var tanggalLahir = '2002-08-19'; // Tanggal lahir telah ditetapkan
+
+        // Hitung umur berdasarkan tanggal lahir
+        var umur = hitungUmur(tanggalLahir);
+
+        // Tampilkan umur
+        var umurElemen = document.getElementById('umur_elemen');
+        umurElemen.innerHTML = '<i class="bi bi-chevron-right"></i> <strong>Umur:</strong> <span>' + umur.tahun + ' tahun, ' + umur.bulan + ' bulan</span>';
+    }
+
+    // Panggil fungsi tampilkanUmurRealTime() saat halaman dimuat
+    tampilkanUmurRealTime();
+</script>
             <p><br>
               Tertarik dalam IT Support dan Web Development. Senang bekerja dalam tim, keinginan untuk belajar dan memiliki komunikasi yang baik.
             </p>
@@ -389,7 +433,7 @@
               <h5>Agustus 2023 - Desember 2023</h5>
               <p><em>Capstone Project</em></p>
               <ul>
-                <li>Merancang dan mengimplementasikan arsitektur cloud, Merancang API untuk keperluan aplikasi dan memastikan keberlanjutan aplikasi yang kami kembangkan melalui ketersediaan yang tinggi, keamanan, dan langkah-langkah efisiensi biaya.</li>
+                <li>Merancang dan mengimplementasikan arsitektur cloud, merancang API untuk keperluan aplikasi dan memastikan keberlanjutan aplikasi yang kami kembangkan melalui ketersediaan yang tinggi, keamanan, dan langkah-langkah efisiensi biaya.</li>
                 <!--<li>Managed up to 5 projects or tasks at a given time while under pressure</li>
                 <li>Recommended and consulted with clients on the most appropriate graphic design</li>
                 <li>Created 4+ design presentations and proposals a month for clients and account managers</li>-->
