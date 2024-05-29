@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirect Page</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-size: 3em;
+        text-align: center;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #countdown {
+        font-size: 0.5em;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Terima Kasih telah mengirim pesan 😊</div>
+    <div id="countdown">
+      Halaman akan dialihkan ke halaman utama dalam
+      <span id="timer">5</span> detik
+    </div>
+    <script>
+      var countdown = 5;
+      var timerElement = document.getElementById("timer");
+
+      function updateCountdown() {
+        timerElement.textContent = countdown;
+        countdown--;
+        if (countdown < 0) {
+          window.location.href = "index.html";
+        } else {
+          setTimeout(updateCountdown, 1000); // Update setiap 1 detik
+        }
+      }
+
+      updateCountdown();
+    </script>
+  </body>
+</html>
