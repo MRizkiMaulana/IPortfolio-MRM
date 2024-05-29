@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirect Page</title>
+    <link href="assets/img/favicon.svg" rel="icon" />
+    <link href="assets/img/favicon.svg" rel="apple-touch-icon" />
+    <title>Terima Kasih</title>
     <style>
       body {
         background-color: black;
@@ -21,6 +23,17 @@
       #countdown {
         font-size: 0.5em;
         margin-top: 20px;
+      }
+
+      /* Responsif hanya terhadap ukuran layar */
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 4vw;
+        }
+        #countdown {
+          font-size: 2vw;
+          margin-top: 3vw;
+        }
       }
     </style>
   </head>
