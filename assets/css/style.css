@@ -968,8 +968,8 @@ section {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin: 0 10px -6px 0;
   border: 3px solid #149ddd;
   border-top-color: #eee;
